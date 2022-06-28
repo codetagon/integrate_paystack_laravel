@@ -62,6 +62,8 @@ class PaymentController extends Controller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
         $result = curl_exec($ch);
+        curl_close($ch);
+        
         return $result;
     }
 
